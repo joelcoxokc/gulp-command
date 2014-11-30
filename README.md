@@ -26,8 +26,10 @@ gulp
 ####description: required
 ####Callback: optional
 
-**If Not Related task is specified, the commands can apply to all tasks**
-However. You still need to pass ```null``` If you are nut using a task
+**If No Related task is specified, the commands can apply to all tasks**
+
+However, You still need to pass ```null``` If you are not using a task
+
 
 ```javascript
 gulp
@@ -43,11 +45,31 @@ gulp build --thing=awesome -s soo -s totally -s cool
 After passing an option property, within then gulp task, you can simply 
 ```javascript 
 gulp
-    .option(null, '-t', '--thing', 'Awesome Thing')
-    .option(null, '-s', '--sweetness', 'So Totally Cool')
-    .task('default', function(){
+    .option('build', '-t', '--thing', 'Awesome Thing')
+    .option('build', '-s', '--sweetness', 'So Totally Cool')
+    .task('build', function(){
         console.log(this.flags)
         => {t:'awesome', sweetness: ['so', 'totally', 'awesome']};
+    });
+```
+
+If we were to run the same command, but under the default task, we would get the following;
+```
+gulp default --thing=awesome -s soo -s totally -s cool
+```
+
+```javascript
+gulp
+    .task('default', function(){
+        console.log(this.flags)
+        => {}
+    });
+
+gulp
+    .option('build', '-t', '--thing', 'Awesome Thing')
+    .option('build', '-s', '--sweetness', 'So Totally Cool')
+    .task('build', function(){
+        
     });
 ```
 
