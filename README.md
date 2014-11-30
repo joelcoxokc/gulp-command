@@ -17,14 +17,15 @@ var gulp        = require('gulp');
 var gulpCommand = require('gulp-command')(gulp);
 
 gulp
-    .option('<related-task>', '-f', '--flag', 'Description', 'callback')
+    .option('<related-task>', '-f, --flag', 'Description', 'callback')
 
 ```
 
-####Related-Task: optional
-####-f, --flag: required (both short and long flag are required)
-####description: required
-####Callback: optional
+ - Related-Task: optional
+
+- -f, --flag: required (both short and long flag are required comma Separated);
+ - description: required
+ - Callback: optional
 
 **If No Related task is specified, the commands can apply to all tasks**
 
@@ -33,7 +34,7 @@ However, You still need to pass ```null``` If you are not using a task
 
 ```javascript
 gulp
-    .option(null, '-f', '--flag', 'Description', 'callback')
+    .option(null, '-f, --flag', 'Description', 'callback')
 ```
 
 ##How to access the flags!
@@ -45,8 +46,8 @@ gulp build --thing=awesome -s soo -s totally -s cool
 After passing an option property, within then gulp task, you can simply 
 ```javascript 
 gulp
-    .option('build', '-t', '--thing', 'Awesome Thing')
-    .option('build', '-s', '--sweetness', 'So Totally Cool')
+    .option('build', '-t, --thing', 'Awesome Thing')
+    .option('build', '-s, --sweetness', 'So Totally Cool')
     .task('build', function(){
         console.log(this.flags)
         => {t:'awesome', sweetness: ['so', 'totally', 'awesome']};
@@ -66,8 +67,8 @@ gulp
     });
 
 gulp
-    .option('build', '-t', '--thing', 'Awesome Thing')
-    .option('build', '-s', '--sweetness', 'So Totally Cool')
+    .option('build', '-t, --thing', 'Awesome Thing')
+    .option('build', '-s, --sweetness', 'So Totally Cool')
     .task('build', function(){
         
     });
