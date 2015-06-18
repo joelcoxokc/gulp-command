@@ -1,7 +1,7 @@
 {
   "name": "gulp-command",
   "description": "Use Commander-CLI options in Gulp for passing Command line flags",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/JoelCoxOKC/gulp-command",
   "author": "joelcoxokc <joelcox@hisimagination.com>",
   "repository": {
