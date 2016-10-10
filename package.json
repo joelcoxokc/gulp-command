@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "lodash": "^4.16.4",
     "minimist": "^1.1.0"
   },
   "devDependencies": {
