@@ -26,14 +26,13 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "gulp": "^3.8.10",
-    "lodash": "^2.4.1",
+    "gulp": "^3.9.1",
+    "lodash": "^4.16.4",
     "minimist": "^1.1.0"
   },
   "devDependencies": {
-    "chai": "~1.9.1",
-    "gulp": "~3.8.6",
-    "gulp-mocha": "~0.5"
+    "chai": "^3.5.0",
+    "gulp-mocha": "^3.0.1"
   },
   "keywords": [],
   "directories": {
